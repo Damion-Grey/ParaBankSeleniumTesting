@@ -11,19 +11,12 @@ public class RegisterTests extends BaseTest {
     public void registrationPositiveTest(){
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.visit();
-        registerPage.enterFirstName("John");
-        registerPage.enterLastName("Smith");
-        registerPage.enterStreetAddress("123 Apple Rd.");
-        registerPage.enterCityAddress("Townsville");
-        registerPage.enterStateAddress("CN");
-        registerPage.enterZipCode("00099");
-        registerPage.enterPhoneNumber("5554443333");
-        registerPage.enterSSN("999887777");
-        registerPage.enterUsername("jsmith");
-        registerPage.enterPassword("Password123");
-        registerPage.enterPasswordConfirmation("Password123");
+        registerPage.fillRegistrationForm("John", "Smith", "123 Apple Rd.",
+                                          "Townsville", "CN", "00099", "5554443333",
+                                          "999887777", "jsmith", "Password123",
+                                          "Password123");
         registerPage.clickRegisterButton();
-        Assert.assertTrue(registerPage.getPageSource().contains("Welcome jsmith"));
+        Assert.assertTrue(registerPage.getWelcomeText().contains("Welcome jsmith"));
     }
 
 }

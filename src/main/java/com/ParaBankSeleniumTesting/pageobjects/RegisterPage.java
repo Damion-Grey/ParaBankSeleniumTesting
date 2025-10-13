@@ -26,47 +26,19 @@ public class RegisterPage extends BasePage{
         super.visit("http://localhost:8080/parabank/register.htm");
     }
 
-    public void enterFirstName(String firstName){
+    public void fillRegistrationForm(String firstName, String lastName, String streetAddress, String city,
+                                     String state, String zip, String phoneNumber, String ssn, String username,
+                                     String password, String confirmation){
         enterText(firstNameInputLocator, firstName);
-    }
-
-    public void enterLastName(String lastName){
         enterText(lastNameInputLocator, lastName);
-    }
-
-    public void enterStreetAddress(String streetAddress){
         enterText(streetInputLocator, streetAddress);
-    }
-
-    public void enterCityAddress(String city){
         enterText(cityInputLocator, city);
-    }
-
-    public void enterStateAddress(String state){
         enterText(stateInputLocator, state);
-    }
-
-    public void enterZipCode(String zip){
         enterText(zipInputLocator, zip);
-    }
-
-    public void enterPhoneNumber(String phoneNumber){
         enterText(phoneNumberInputLocator, phoneNumber);
-    }
-
-    public void enterSSN(String ssn){
         enterText(ssnInputLocator, ssn);
-    }
-
-    public void enterUsername(String username){
         enterText(usernameInputLocator, username);
-    }
-
-    public void enterPassword(String password){
         enterText(passwordInputLocator, password);
-    }
-
-    public void enterPasswordConfirmation(String confirmation){
         enterText(confirmPasswordInputLocator, confirmation);
     }
 

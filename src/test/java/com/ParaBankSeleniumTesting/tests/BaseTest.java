@@ -13,8 +13,8 @@ public class BaseTest {
         driver = new ChromeDriver();
     }
 
-    /*@AfterMethod(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 }
