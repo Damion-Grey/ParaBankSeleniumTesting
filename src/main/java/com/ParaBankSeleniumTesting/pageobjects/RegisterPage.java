@@ -16,7 +16,7 @@ public class RegisterPage extends BasePage{
     private By passwordInputLocator = By.id ("customer.password");
     private By confirmPasswordInputLocator = By.id ("repeatedPassword");
     private By registerButtonLocator = By.xpath("//input[@value='Register']");
-    private By welcomeTextLocator = By.xpath("//div[@id='rightPanel']/h1[@class='title']");
+    private By headerTextLocator = By.xpath("//div[@id='rightPanel']/h1[@class='title']");
 
     public RegisterPage(WebDriver driver){
         super(driver);
@@ -46,7 +46,12 @@ public class RegisterPage extends BasePage{
         driver.findElement(registerButtonLocator).click();
     }
 
-    public String getWelcomeText(){
-       return  waitForElement(welcomeTextLocator).getText();
+    public String getHeaderText(){
+       return  waitForElement(headerTextLocator).getText();
     }
+
+    public String getErrorText(String ErrorType){
+        return waitForElement(By.id(ErrorType + ".errors")).getText();
+    }
+
 }

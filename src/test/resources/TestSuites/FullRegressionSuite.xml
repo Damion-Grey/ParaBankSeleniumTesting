@@ -1,0 +1,168 @@
+<suite name="FullRegressionSuite" verbose="1">
+    <!-- Core parameters used for each test -->
+    <parameter name="FirstName"  value="Sam"/>
+    <parameter name="LastName"  value="Lot"/>
+    <parameter name="StreetAddress"  value="990 Paved Rd"/>
+    <parameter name="City"  value="Townsville"/>
+    <parameter name="State"  value="CN"/>
+    <parameter name="Zip"  value="99883"/>
+    <parameter name="PhoneNumber"  value="2223334444"/>
+    <parameter name="Ssn"  value="999223333"/>
+    <parameter name="Username"  value="slot"/>
+    <parameter name="Password"  value="Password123"/>
+    <parameter name="Confirmation"  value="Password123"/>
+
+    <test name="Positive Registration Test">
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No First Name - Registration Negative Test">
+        <parameter name="FirstName"  value=""/>
+        <parameter name="ErrorType" value="customer.firstName"/>
+        <parameter name="ErrorMsg" value="First name is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Last Name - Registration Negative Test">
+        <parameter name="LastName"  value=""/>
+        <parameter name="ErrorType" value="customer.lastName"/>
+        <parameter name="ErrorMsg" value="Last name is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Street - Registration Negative Test">
+        <parameter name="StreetAddress"  value=""/>
+        <parameter name="ErrorType" value="customer.address.street"/>
+        <parameter name="ErrorMsg" value="Address is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No City - Registration Negative Test">
+        <parameter name="City"  value=""/>
+        <parameter name="ErrorType" value="customer.address.city"/>
+        <parameter name="ErrorMsg" value="City is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No State - Registration Negative Test">
+        <parameter name="State"  value=""/>
+        <parameter name="ErrorType" value="customer.address.state"/>
+        <parameter name="ErrorMsg" value="State is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Zip - Registration Negative Test">
+        <parameter name="Zip"  value=""/>
+        <parameter name="ErrorType" value="customer.address.zipCode"/>
+        <parameter name="ErrorMsg" value="Zip Code is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Phone - Registration Negative Test">
+        <parameter name="PhoneNumber"  value=""/>
+        <!-- Expected error type/msg is assumed. Confirm in source code -->
+        <parameter name="ErrorType" value="customer.phoneNumber"/>
+        <parameter name="ErrorMsg" value="Phone Number is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No SSN - Registration Negative Test">
+        <parameter name="Ssn"  value=""/>
+        <parameter name="ErrorType" value="customer.ssn"/>
+        <parameter name="ErrorMsg" value="Social Security Number is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Username - Registration Negative Test">
+        <parameter name="Username"  value=""/>
+        <parameter name="ErrorType" value="customer.username"/>
+        <parameter name="ErrorMsg" value="Username is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Password - Registration Negative Test">
+        <parameter name="Password"  value=""/>
+        <parameter name="ErrorType" value="customer.password"/>
+        <parameter name="ErrorMsg" value="Password is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="No Confirmation Password - Registration Negative Test">
+        <parameter name="Confirmation"  value=""/>
+        <parameter name="ErrorType" value="repeatedPassword"/>
+        <parameter name="ErrorMsg" value="Password confirmation is required."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
