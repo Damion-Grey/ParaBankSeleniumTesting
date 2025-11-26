@@ -165,4 +165,15 @@
             </class>
         </classes>
     </test>
+    <test name="Username Taken - Registration Negative Test">
+        <parameter name="ErrorType" value="customer.username"/>
+        <parameter name="ErrorMsg" value="This username already exists."/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.register.RegisterTests">
+                <methods>
+                    <include name="registrationNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
