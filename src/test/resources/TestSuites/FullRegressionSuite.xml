@@ -176,4 +176,13 @@
             </class>
         </classes>
     </test>
+    <test name="Positive Login Test">
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.front.FrontTests">
+                <methods>
+                    <include name="PositiveLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
