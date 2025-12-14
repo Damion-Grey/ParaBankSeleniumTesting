@@ -1,0 +1,35 @@
+<suite name="FullRegressionSuite" verbose="1">
+    <!-- Core parameters used for each test -->
+    <parameter name="FirstName"  value="Sam"/>
+    <parameter name="LastName"  value="Lot"/>
+    <parameter name="StreetAddress"  value="990 Paved Rd"/>
+    <parameter name="City"  value="Townsville"/>
+    <parameter name="State"  value="CN"/>
+    <parameter name="Zip"  value="99883"/>
+    <parameter name="PhoneNumber"  value="2223334444"/>
+    <parameter name="Ssn"  value="999223333"/>
+    <parameter name="Username"  value="slot"/>
+    <parameter name="Password"  value="Password123"/>
+    <parameter name="Confirmation"  value="Password123"/>
+
+    <test name="Checking - Open Account Positive Test">
+        <parameter name="AccountType" value="CHECKING"/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.OpenAccountTests">
+                <methods>
+                    <include name="openAccountPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Savings - Open Account Positive Test">
+        <parameter name="AccountType" value="SAVINGS"/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.OpenAccountTests">
+                <methods>
+                    <include name="openAccountPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

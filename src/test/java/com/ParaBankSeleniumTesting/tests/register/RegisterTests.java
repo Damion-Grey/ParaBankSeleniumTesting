@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class RegisterTests extends BaseTest {
     @Parameters({"FirstName", "LastName", "StreetAddress", "City", "State", "Zip", "PhoneNumber", "Ssn", "Username",
-            "Password", "Confirmation"})
+                 "Password", "Confirmation"})
     @Test
     public void registrationPositiveTest(String FirstName, String LastName, String StreetAddress, String City,
                                          String State, String Zip, String PhoneNumber, String Ssn, String Username,

@@ -185,4 +185,24 @@
             </class>
         </classes>
     </test>
+    <test name="Checking - Open Account Positive Test">
+        <parameter name="AccountType" value="CHECKING"/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.OpenAccountTests">
+                <methods>
+                    <include name="openAccountPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Savings - Open Account Positive Test">
+        <parameter name="AccountType" value="SAVINGS"/>
+        <classes>
+            <class name="com.ParaBankSeleniumTesting.tests.OpenAccountTests">
+                <methods>
+                    <include name="openAccountPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
