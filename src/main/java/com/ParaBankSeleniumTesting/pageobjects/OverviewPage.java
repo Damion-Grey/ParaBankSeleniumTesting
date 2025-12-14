@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class OverviewPage extends BasePage{
+    private By pageHeader = By.xpath("//div[@id='showOverview']");
     private By accountTableBodyRows = By.xpath("//table[@id='accountTable']/tbody/tr");
 
     public OverviewPage(WebDriver driver){
@@ -19,6 +20,10 @@ public class OverviewPage extends BasePage{
 
     public List<WebElement> getListOfAccounts(){
         return driver.findElements(accountTableBodyRows);
+    }
+
+    public void verifyOnOverviewPage(){
+        waitForElement(pageHeader);
     }
 
 }
